@@ -15,7 +15,6 @@
           <li>総合優勝</li>
           <li>チームラボ賞</li>
           <li>審査員審査賞</li>
-          <li>IVRC ドスパラ賞</li>
         </ul>
         <p>以下、作品リンク</p>
         <ul class="examples">
@@ -54,7 +53,7 @@ export default {
             path: "http://ivrc.net/archive/rubiks-cube-transform-3-degrees-of-freedom-force-sense-presentation-device2017/",
           },
         ],
-        keywords: ["Virtual Reality", "Haptics", "Mechatronics", "Unity"],
+        keywords: ["Virtual Reality", "Mechatronics", "Haptics", "Unity"],
       },
     };
   },

@@ -15,6 +15,8 @@
       <section>
         <h2>VR App</h2>
         <h3>for Research and IVRC</h3>
+        <p>バーチャルリアリティ技術者（アプリケーション）</p>
+        <p>バーチャルリアリティ技術者（セオリー）</p>
         <ul class="keywords">
           <li v-for="keyword in vr.keywords" :key="keyword">
             {{ keyword }}

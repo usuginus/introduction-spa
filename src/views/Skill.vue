@@ -4,7 +4,8 @@
     <article>
       <section>
         <h2>Web App</h2>
-        <h3>for REALITY</h3>
+        <h3>for Work</h3>
+        <p>Google Cloud Certified - Professional Cloud Developer取得</p>
         <ul class="keywords">
           <li v-for="keyword in web.keywords" :key="keyword">
             {{ keyword }}
@@ -34,6 +35,8 @@ export default {
           "Google Cloud Platform",
           "Golang",
           "Node.js",
+          "MySQL",
+          "Redis",
           "Cloud Development",
         ],
       },

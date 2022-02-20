@@ -12,6 +12,7 @@
           システムは映像提示装置と大風力を知覚させる風覚提示装置、水噴流反力を提示する力覚提示装置から構成される。
           風覚は温冷覚、聴覚、皮膚感覚、深部感覚を刺激することで知覚させ、水噴流反力は牽引力及びジャイロモーメントを用いて再現する．
         </p>
+        <img src="../assets/img/portfolio/ivrc2019.jpeg" width="256" />
         <p>受賞・関連リンク</p>
         <ul>
           <li>ドスパラ賞</li>
@@ -39,6 +40,7 @@
         <p>
           タブレットディスプレイを動作させ、指先にせん断力を与えることでバーチャル物体の形状や重さをユーザに知覚させるハプティックディスプレイです。
         </p>
+        <img src="../assets/img/portfolio/research.jpeg" width="256" />
         <p>受賞・関連リンク</p>
         <ul>
           <li>一般社団法人茗渓会賞</li>
@@ -67,6 +69,7 @@
           この現象を逆手に取り、外部から膝の振動を与え、疑似的に膝を痙攣させることでユーザに恐怖感を錯覚させる。
           膝を振動させる膝振動デバイスのみではなく、HMD、モーションプラットフォームを用いることで、ユーザに恐怖感を与える。
         </p>
+        <img src="../assets/img/portfolio/ivrc2018.jpeg" width="256" />
         <p>受賞・関連リンク</p>
         <ul>
           <li>チームラボ賞</li>
@@ -92,10 +95,16 @@
           ルービックキューブ外付型力覚提示デバイスと4面ホログラフィックディスプレイを用いた力覚提示装置。
           物体識別装置の中に入れた物体をルービックキューブ外付型力覚提示デバイスによってねじる様子を表示し，その力覚をユーザに提示する.
         </p>
-        <p>受賞・関連リンク</p>
-        <ul>
-          <li>チームラボ賞</li>
-        </ul>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/344g8o2PicA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <p>関連リンク</p>
         <ul class="examples">
           <li v-for="example in ivrc2017.examples" :key="example.title">
             <a v-bind:href="example.path" target="_blank">

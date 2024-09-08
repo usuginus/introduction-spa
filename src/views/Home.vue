@@ -84,4 +84,23 @@ p {
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 10vw;
+  }
+  p {
+    font-size: 5vw;
+  }
+  .texts {
+    padding-top: 15vh;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 12vw;
+  }
+  p {
+    font-size: 6vw;
+  }
+}
 </style>

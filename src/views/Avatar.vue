@@ -33,6 +33,7 @@
     transform: translate(-50%, 0) scale(1);
     display: block;
     width: 100%;
+    min-width: 1024px;
     height: 79vh;
     opacity: 0;
     animation: fadeIn 1s ease 0.3s 1 normal;

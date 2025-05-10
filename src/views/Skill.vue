@@ -62,8 +62,8 @@ export default {
       web: {
         examples: [
           {
-            title: "グリー新卒MVP紹介記事",
-            path: "https://corp.gree.net/jp/ja/6degrees/2021/08/01.html",
+            title: "GREE -New Grad of the year- 2020 受賞",
+            path: "https://hd.gree.net/jp/ja/6degrees/2021/08/01.html",
           },
           {
             title:
@@ -71,24 +71,29 @@ export default {
             path: "https://techcon.gree.jp/2021/session/Session-11",
           },
           {
-            title: "機械学習 in REALITY - REALITY Advent Calendar #09",
-            path: "https://note.com/reality_eng/n/n35a8074466a7",
+            title:
+              "Observability強化とPerformance Tuningを行うチームの立ち上げ",
+            path: "https://note.com/reality_eng/n/n304df572550e",
           },
           {
-            title: "アプリ起動時間を最大60%カット！？",
-            path: "https://note.com/reality_eng/n/nf5636c210682",
+            title: "Protocol Buffersの検証と本番アプリへの導入",
+            path: "https://note.com/reality_eng/n/n2223d56db125",
           },
           {
-            title: "REALITYの配信音量分析 -快適な配信環境を作っていく-",
-            path: "https://note.com/reality_eng/n/n457e4e9a03f7",
+            title: "アプリ内配信サーバのマルチリージョン化",
+            path: "https://note.com/reality_eng/n/nc2f16c9fbad3",
+          },
+          {
+            title: "コーディングエージェントの導入",
+            path: "https://note.com/reality_eng/n/n4ad2f2f35127",
           },
         ],
         keywords: [
-          "Google Cloud Platform",
-          "Golang",
-          "Node.js",
+          "Go",
           "TypeScript",
+          "Node.js",
           "Vue.js",
+          "Google Cloud",
           "RDBMS",
           "NoSQL",
           "Observability",

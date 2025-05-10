@@ -3,6 +3,77 @@
     <h1>Portfolio</h1>
     <article>
       <section>
+        <h2>REALITY</h2>
+        <h3>グリー株式会社 / REALITY株式会社</h3>
+        <p>メタバースアプリ「REALITY」の開発に従事</p>
+        <p>
+          世界63の地域で展開されているスマートフォン向けメタバースアプリ「REALITY」のサーバーサイドを中心とした開発を担当。
+          新規機能開発やパフォーマンスチューニング、ログ基盤・データ基盤の整備、Observabilityの強化などを通じて、アプリの機能向上と運用効率化に貢献。
+          GoやTypeScriptを用いたアプリケーション開発を中心にソフトウェアエンジニア、データエンジニア、エンジニアリングマネージャを経験。
+        </p>
+        <img src="../assets/img/portfolio/reality-avatar2.webp" width="512" />
+        <p>受賞・執筆記事・関連リンク</p>
+        <ul class="examples">
+          <li>
+            <a href="https://reality.app/" target="_blank">
+              <span>REALITY｜顔出しナシのライブ配信アプリ</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://hd.gree.net/jp/ja/6degrees/2021/08/01.html"
+              target="_blank"
+            >
+              <span>GREE -New Grad of the year- 2020 受賞</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://note.com/reality_eng/n/n304df572550e"
+              target="_blank"
+            >
+              <span
+                >Observability強化とPerformance
+                Tuningを行うチームの立ち上げ</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://note.com/reality_eng/n/n2223d56db125"
+              target="_blank"
+            >
+              <span>Protocol Buffersの検証と本番アプリへの導入</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://note.com/reality_eng/n/nc2f16c9fbad3"
+              target="_blank"
+            >
+              <span>アプリ内配信サーバのマルチリージョン化</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://note.com/reality_eng/n/n4ad2f2f35127"
+              target="_blank"
+            >
+              <span>コーディングエージェントの導入</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="keywords">
+          <li>Go</li>
+          <li>TypeScript</li>
+          <li>Google Cloud</li>
+          <li>Software Engineering</li>
+          <li>Data Engineering</li>
+          <li>Observability Engineering</li>
+          <li>Metaverse</li>
+        </ul>
+      </section>
+      <section>
         <h2>VR消防体験 -炎舞-</h2>
         <h3>Team CyberSpaceLab</h3>
         <p>IVRC2019の総合優勝作品</p>

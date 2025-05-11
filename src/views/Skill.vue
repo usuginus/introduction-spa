@@ -19,7 +19,11 @@
           </li>
         </ul>
         <p>使用技術</p>
-        <div v-for="category in web.technologies" :key="category.category">
+        <div
+          v-for="category in web.technologies"
+          :key="category.category"
+          class="technology-category"
+        >
           <span>{{ category.category }}</span>
           <ul class="technology">
             <li v-for="item in category.items" :key="item.name">
@@ -28,7 +32,7 @@
                 :icon="item.icon"
                 class="tech-icon"
               />
-              {{ item.name }}
+              <span>{{ item.name }}</span>
             </li>
           </ul>
         </div>
@@ -52,7 +56,11 @@
           </li>
         </ul>
         <p>使用技術</p>
-        <div v-for="category in vr.technologies" :key="category.category">
+        <div
+          v-for="category in vr.technologies"
+          :key="category.category"
+          class="technology-category"
+        >
           <span>{{ category.category }}</span>
           <ul class="technology">
             <li v-for="item in category.items" :key="item.name">
@@ -61,7 +69,7 @@
                 :icon="item.icon"
                 class="tech-icon"
               />
-              {{ item.name }}
+              <span>{{ item.name }}</span>
             </li>
           </ul>
         </div>
@@ -110,7 +118,6 @@ export default {
               { name: "Go", icon: ["fab", "golang"] },
               { name: "TypeScript", icon: ["fas", "code"] },
               { name: "JavaScript", icon: ["fab", "js-square"] },
-              { name: "C#(Unity)", icon: ["fab", "unity"] },
             ],
           },
           {
@@ -210,6 +217,7 @@ export default {
             items: [
               { name: "C++", icon: ["fas", "code"] },
               { name: "C#(Unity)", icon: ["fab", "unity"] },
+              { name: "ROS", icon: ["fas", "code"] },
               { name: "R", icon: ["fab", "r-project"] },
               { name: "Fortran", icon: ["fas", "code"] },
             ],
@@ -218,6 +226,29 @@ export default {
             category: "Development Tools",
             items: [
               { name: "Google App Script", icon: ["fab", "google-drive"] },
+            ],
+          },
+          {
+            category: "Hardware & Robotics",
+            items: [
+              { name: "M5Stack", icon: ["fas", "microchip"] },
+              { name: "Arduino", icon: ["fas", "microchip"] },
+              { name: "Raspberry Pi", icon: ["fab", "raspberry-pi"] },
+              { name: "Circuit Design", icon: ["fas", "microchip"] },
+              { name: "Mechatronics", icon: ["fas", "robot"] },
+              { name: "Actuators", icon: ["fas", "cogs"] },
+              { name: "Sensors", icon: ["fas", "satellite-dish"] },
+              { name: "Serial Communication", icon: ["fas", "plug"] },
+            ],
+          },
+          {
+            category: "Simulation & Control",
+            items: [
+              {
+                name: "Kinematics / Inverse Kinematics",
+                icon: ["fas", "project-diagram"],
+              },
+              { name: "Elastic Body Simulation", icon: ["fas", "cubes"] },
             ],
           },
         ],

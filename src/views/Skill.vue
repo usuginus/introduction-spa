@@ -4,13 +4,13 @@
     <article>
       <section>
         <h2>Web App</h2>
-        <h3>for Work</h3>
-        <p>バックエンドアプリケーション開発が主。</p>
+        <h3>for Software Development</h3>
         <p>受賞・資格・関連リンク</p>
         <ul>
           <li>GREE -New Grad of the year- 2020 受賞</li>
           <li>Google Cloud Certified - Professional Cloud Developer取得</li>
         </ul>
+        <p>関連リンク</p>
         <ul class="examples">
           <li v-for="example in web.examples" :key="example.title">
             <a v-bind:href="example.path" target="_blank">
@@ -18,19 +18,28 @@
             </a>
           </li>
         </ul>
-        <ul class="keywords">
-          <li v-for="keyword in web.keywords" :key="keyword">
-            {{ keyword }}
-          </li>
-        </ul>
+        <p>使用技術</p>
+        <div
+          v-for="category in web.technologies"
+          :key="category.category"
+          class="technology-category"
+        >
+          <span>{{ category.category }}</span>
+          <ul class="technology">
+            <li v-for="item in category.items" :key="item.name">
+              <font-awesome-icon
+                v-if="item.icon"
+                :icon="item.icon"
+                class="tech-icon"
+              />
+              <span>{{ item.name }}</span>
+            </li>
+          </ul>
+        </div>
       </section>
       <section>
         <h2>VR App</h2>
-        <h3>for Research and IVRC</h3>
-        <p>
-          Haptic
-          Interface設計・製作やUnityによるVRクライアントアプリケーション開発。
-        </p>
+        <h3>for Research & Development</h3>
         <p>受賞・資格・関連リンク</p>
         <ul>
           <li>一般社団法人茗渓会賞</li>
@@ -38,6 +47,7 @@
           <li>バーチャルリアリティ技術者（アプリケーション）取得</li>
           <li>バーチャルリアリティ技術者（セオリー）取得</li>
         </ul>
+        <p>関連リンク</p>
         <ul class="examples">
           <li v-for="example in vr.examples" :key="example.title">
             <a v-bind:href="example.path" target="_blank">
@@ -45,11 +55,24 @@
             </a>
           </li>
         </ul>
-        <ul class="keywords">
-          <li v-for="keyword in vr.keywords" :key="keyword">
-            {{ keyword }}
-          </li>
-        </ul>
+        <p>使用技術</p>
+        <div
+          v-for="category in vr.technologies"
+          :key="category.category"
+          class="technology-category"
+        >
+          <span>{{ category.category }}</span>
+          <ul class="technology">
+            <li v-for="item in category.items" :key="item.name">
+              <font-awesome-icon
+                v-if="item.icon"
+                :icon="item.icon"
+                class="tech-icon"
+              />
+              <span>{{ item.name }}</span>
+            </li>
+          </ul>
+        </div>
       </section>
     </article>
   </div>
@@ -88,20 +111,93 @@ export default {
             path: "https://note.com/reality_eng/n/n4ad2f2f35127",
           },
         ],
-        keywords: [
-          "Go",
-          "TypeScript",
-          "Node.js",
-          "Vue.js",
-          "Google Cloud",
-          "RDBMS",
-          "NoSQL",
-          "Observability",
-          "CI/CD",
-          "Container Orchestration",
-          "BigQuery",
-          "Data Engineering",
-          "Protocol Buffers",
+        technologies: [
+          {
+            category: "Programming Languages",
+            items: [
+              { name: "Go", icon: ["fab", "golang"] },
+              { name: "TypeScript", icon: ["fas", "code"] },
+              { name: "JavaScript", icon: ["fab", "js-square"] },
+            ],
+          },
+          {
+            category: "Runtime Environments",
+            items: [
+              { name: "Node.js", icon: ["fab", "node-js"] },
+              { name: "Deno", icon: ["fas", "code"] },
+              { name: "Bun", icon: ["fas", "code"] },
+            ],
+          },
+          {
+            category: "Web Frontend Frameworks",
+            items: [
+              { name: "Vue.js", icon: ["fab", "vuejs"] },
+              { name: "React", icon: ["fab", "react"] },
+            ],
+          },
+          {
+            category: "Google Cloud",
+            items: [
+              { name: "GKE", icon: ["fas", "dharmachakra"] },
+              { name: "BigQuery", icon: ["fas", "database"] },
+              { name: "Cloud Storage", icon: ["fas", "cloud"] },
+              { name: "CloudSQL", icon: ["fas", "database"] },
+              { name: "Cloud Spanner", icon: ["fas", "database"] },
+              { name: "Memorystore", icon: ["fas", "memory"] },
+              { name: "Pub/Sub", icon: ["fas", "project-diagram"] },
+              { name: "Cloud Scheduler", icon: ["fas", "clock"] },
+              { name: "Cloud Tasks", icon: ["fas", "tasks"] },
+            ],
+          },
+          {
+            category: "Container / Orchestration",
+            items: [
+              { name: "Docker", icon: ["fab", "docker"] },
+              { name: "Kubernetes", icon: ["fas", "dharmachakra"] },
+            ],
+          },
+          {
+            category: "Data Stores",
+            items: [
+              { name: "MySQL", icon: ["fas", "database"] },
+              { name: "Cloud Spanner", icon: ["fas", "database"] },
+              { name: "Redis", icon: ["fas", "database"] },
+              { name: "Memcached", icon: ["fas", "memory"] },
+              { name: "Valkey", icon: ["fas", "database"] },
+              { name: "Firestore", icon: ["fas", "fire"] },
+              { name: "Firebase Realtime Database", icon: ["fas", "database"] },
+            ],
+          },
+          {
+            category: "Observability Engineering",
+            items: [
+              { name: "Cloud Logging", icon: ["fas", "file-alt"] },
+              { name: "Cloud Monitoring", icon: ["fas", "chart-line"] },
+              { name: "Cloud Tracing", icon: ["fas", "sitemap"] },
+              { name: "Grafana", icon: ["fas", "chart-bar"] },
+              { name: "Prometheus", icon: ["fas", "fire-alt"] },
+            ],
+          },
+          {
+            category: "Data Engineering",
+            items: [
+              { name: "BigQuery", icon: ["fas", "database"] },
+              { name: "SQL", icon: ["fas", "database"] },
+              { name: "Dataform", icon: ["fas", "code-branch"] },
+              { name: "Looker Studio", icon: ["fas", "chart-pie"] },
+              { name: "Datastream", icon: ["fas", "stream"] },
+            ],
+          },
+          {
+            category: "Development Tools",
+            items: [
+              { name: "Protocol Buffers", icon: ["fas", "cubes"] },
+              { name: "GitHub Actions", icon: ["fab", "github"] },
+              { name: "Jenkins", icon: ["fab", "jenkins"] },
+              { name: "Terraform", icon: ["fas", "layer-group"] },
+              { name: "Google App Script", icon: ["fab", "google-drive"] },
+            ],
+          },
         ],
       },
       vr: {
@@ -115,14 +211,46 @@ export default {
             path: "https://ivrc.net/2019/release2/",
           },
         ],
-        keywords: [
-          "IVRC",
-          "Virtual Reality",
-          "Mechatronics",
-          "Unity",
-          "ROS",
-          "M5Stack",
-          "RaspberryPi",
+        technologies: [
+          {
+            category: "Programming Languages",
+            items: [
+              { name: "C++", icon: ["fas", "code"] },
+              { name: "C#(Unity)", icon: ["fab", "unity"] },
+              { name: "ROS", icon: ["fas", "code"] },
+              { name: "R", icon: ["fab", "r-project"] },
+              { name: "Fortran", icon: ["fas", "code"] },
+            ],
+          },
+          {
+            category: "Development Tools",
+            items: [
+              { name: "Google App Script", icon: ["fab", "google-drive"] },
+            ],
+          },
+          {
+            category: "Hardware & Robotics",
+            items: [
+              { name: "M5Stack", icon: ["fas", "microchip"] },
+              { name: "Arduino", icon: ["fas", "microchip"] },
+              { name: "Raspberry Pi", icon: ["fab", "raspberry-pi"] },
+              { name: "Circuit Design", icon: ["fas", "microchip"] },
+              { name: "Mechatronics", icon: ["fas", "robot"] },
+              { name: "Actuators", icon: ["fas", "cogs"] },
+              { name: "Sensors", icon: ["fas", "satellite-dish"] },
+              { name: "Serial Communication", icon: ["fas", "plug"] },
+            ],
+          },
+          {
+            category: "Simulation & Control",
+            items: [
+              {
+                name: "Kinematics / Inverse Kinematics",
+                icon: ["fas", "project-diagram"],
+              },
+              { name: "Elastic Body Simulation", icon: ["fas", "cubes"] },
+            ],
+          },
         ],
       },
     };

@@ -107,6 +107,46 @@ ul {
   content: "";
   margin-right: 0;
 }
+.technology-category {
+  margin-bottom: 20px;
+  > span {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee; // カテゴリ名の下線
+  }
+}
+ul.technology {
+  display: flex;
+  flex-wrap: wrap; // 要素を折り返す
+  gap: 10px; // スキルアイテム間のスペース
+  padding-left: 0;
+  list-style-type: none;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 8px; // アイコンとテキスト間のスペース
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .tech-icon {
+      font-size: 1.2em;
+      color: #555;
+    }
+    span {
+      font-size: 0.95em;
+    }
+  }
+}
 section {
   padding: 100px 50px;
   margin-bottom: 50px;

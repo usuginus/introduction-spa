@@ -12,6 +12,14 @@
           GoやTypeScriptを用いたアプリケーション開発を中心にソフトウェアエンジニア、データエンジニア、エンジニアリングマネージャを経験。
         </p>
         <img src="../assets/img/portfolio/reality-avatar2.webp" width="512" />
+        <iframe
+          class="youtube-frame"
+          src="https://www.youtube.com/embed/ktMNqFuW6uQ?si=d2jKqDZi7C8x7qez"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
         <p>受賞・執筆記事・関連リンク</p>
         <ul class="examples">
           <li v-for="example in reality.examples" :key="example.title">
@@ -34,7 +42,7 @@
           消防隊員の視点から消火活動の体験が可能であるVRアトラクション。
           体験者は、火災現場を再現した映像を提示され、ホース型コントローラを操作することで消火活動を行う。
           システムは映像提示装置と大風力を知覚させる風覚提示装置、水噴流反力を提示する力覚提示装置から構成される。
-          風覚は温冷覚、聴覚、皮膚感覚、深部感覚を刺激することで知覚させ、水噴流反力は牽引力及びジャイロモーメントを用いて再現する．
+          風覚は温冷覚、聴覚、皮膚感覚、深部感覚を刺激することで知覚させ、水噴流反力は牽引力及びジャイロモーメントを用いて再現する。
         </p>
         <div class="image-stack">
           <img src="../assets/img/portfolio/ivrc2019.jpeg" width="512" />
@@ -62,19 +70,18 @@
         <h3>Research on Haptic Interface</h3>
         <p>大学院の研究テーマ</p>
         <p>
-          タブレットディスプレイを動作させ、指先にせん断力を与えることでバーチャル物体の形状や重さをユーザに知覚させるハプティックディスプレイです。
+          タブレットディスプレイを動作させ、指先にせん断力を与えることでバーチャル物体の形状や重さをユーザに知覚させるハプティックディスプレイ。
         </p>
-        <div class="youtube-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/YCZPmj7NtSQ?si=bjgQ2KKeMtaSStMK&amp;start=71"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
+
+        <iframe
+          class="youtube-frame"
+          src="https://www.youtube.com/embed/YCZPmj7NtSQ?si=bjgQ2KKeMtaSStMK&amp;start=71"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+
         <p>受賞・関連リンク</p>
         <ul>
           <li v-for="award in research.awards" :key="award">{{ award }}</li>
@@ -102,6 +109,14 @@
           この現象を逆手に取り、外部から膝の振動を与え、疑似的に膝を痙攣させることでユーザに恐怖感を錯覚させる。
           膝を振動させる膝振動デバイスのみではなく、HMD、モーションプラットフォームを用いることで、ユーザに恐怖感を与える。
         </p>
+        <iframe
+          class="youtube-frame"
+          src="https://www.youtube.com/embed/8WcjSPBK4X0?si=14a-aVATiDYj5hGf"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
         <p>受賞・関連リンク</p>
         <ul>
           <li v-for="award in ivrc2018.awards" :key="award">{{ award }}</li>
@@ -125,19 +140,18 @@
         <p>IVRC2017の決勝大会進出作品</p>
         <p>
           ルービックキューブ外付型力覚提示デバイスと4面ホログラフィックディスプレイを用いた力覚提示装置。
-          物体識別装置の中に入れた物体をルービックキューブ外付型力覚提示デバイスによってねじる様子を表示し，その力覚をユーザに提示する.
+          物体識別装置の中に入れた物体をルービックキューブ外付型力覚提示デバイスによってねじる様子を表示し、その力覚をユーザに提示する。
         </p>
-        <div class="youtube-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/344g8o2PicA"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+
+        <iframe
+          class="youtube-frame"
+          src="https://www.youtube.com/embed/344g8o2PicA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
         <p>関連リンク</p>
         <ul class="examples">
           <li v-for="example in ivrc2017.examples" :key="example.title">
@@ -260,5 +274,11 @@ export default {
 .image-stack img {
   display: block;
   margin-bottom: 15px;
+}
+iframe.youtube-frame {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-width: 512px;
 }
 </style>

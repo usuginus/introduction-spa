@@ -11,66 +11,22 @@
           新規機能開発やパフォーマンスチューニング、ログ基盤・データ基盤の整備、Observabilityの強化などを通じて、アプリの機能向上と運用効率化に貢献。
           GoやTypeScriptを用いたアプリケーション開発を中心にソフトウェアエンジニア、データエンジニア、エンジニアリングマネージャを経験。
         </p>
-        <img src="../assets/img/portfolio/reality-avatar2.webp" width="512" />
+        <img
+          src="../assets/img/portfolio/reality-avatar2.webp"
+          class="portfolio-image"
+        />
         <p>受賞・執筆記事・関連リンク</p>
         <ul class="examples">
-          <li>
-            <a href="https://reality.app/" target="_blank">
-              <span>REALITY｜顔出しナシのライブ配信アプリ</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://hd.gree.net/jp/ja/6degrees/2021/08/01.html"
-              target="_blank"
-            >
-              <span>GREE -New Grad of the year- 2020 受賞</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://note.com/reality_eng/n/n304df572550e"
-              target="_blank"
-            >
-              <span
-                >Observability強化とPerformance
-                Tuningを行うチームの立ち上げ</span
-              >
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://note.com/reality_eng/n/n2223d56db125"
-              target="_blank"
-            >
-              <span>Protocol Buffersの検証と本番アプリへの導入</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://note.com/reality_eng/n/nc2f16c9fbad3"
-              target="_blank"
-            >
-              <span>アプリ内配信サーバのマルチリージョン化</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://note.com/reality_eng/n/n4ad2f2f35127"
-              target="_blank"
-            >
-              <span>コーディングエージェントの導入</span>
+          <li v-for="example in reality.examples" :key="example.title">
+            <a :href="example.path" target="_blank">
+              <span>{{ example.title }}</span>
             </a>
           </li>
         </ul>
         <ul class="keywords">
-          <li>Go</li>
-          <li>TypeScript</li>
-          <li>Google Cloud</li>
-          <li>Software Engineering</li>
-          <li>Data Engineering</li>
-          <li>Observability Engineering</li>
-          <li>Metaverse</li>
+          <li v-for="keyword in reality.keywords" :key="keyword">
+            {{ keyword }}
+          </li>
         </ul>
       </section>
       <section>
@@ -83,13 +39,13 @@
           システムは映像提示装置と大風力を知覚させる風覚提示装置、水噴流反力を提示する力覚提示装置から構成される。
           風覚は温冷覚、聴覚、皮膚感覚、深部感覚を刺激することで知覚させ、水噴流反力は牽引力及びジャイロモーメントを用いて再現する．
         </p>
-        <img src="../assets/img/portfolio/ivrc2019.jpeg" width="256" />
+        <img
+          src="../assets/img/portfolio/ivrc2019.jpeg"
+          class="portfolio-image"
+        />
         <p>受賞・関連リンク</p>
         <ul>
-          <li>ドスパラ賞</li>
-          <li>ソリッドレイ研究所賞</li>
-          <li>総合優勝</li>
-          <li>一般社団法人茗渓会賞</li>
+          <li v-for="award in ivrc2019.awards" :key="award">{{ award }}</li>
         </ul>
         <ul class="examples">
           <li v-for="example in ivrc2019.examples" :key="example.title">
@@ -111,11 +67,13 @@
         <p>
           タブレットディスプレイを動作させ、指先にせん断力を与えることでバーチャル物体の形状や重さをユーザに知覚させるハプティックディスプレイです。
         </p>
-        <img src="../assets/img/portfolio/research.jpeg" width="256" />
+        <img
+          src="../assets/img/portfolio/research.jpeg"
+          class="portfolio-image"
+        />
         <p>受賞・関連リンク</p>
         <ul>
-          <li>一般社団法人茗渓会賞</li>
-          <li>電気学会技術委員会奨励賞</li>
+          <li v-for="award in research.awards" :key="award">{{ award }}</li>
         </ul>
         <ul class="examples">
           <li v-for="example in research.examples" :key="example.title">
@@ -140,10 +98,13 @@
           この現象を逆手に取り、外部から膝の振動を与え、疑似的に膝を痙攣させることでユーザに恐怖感を錯覚させる。
           膝を振動させる膝振動デバイスのみではなく、HMD、モーションプラットフォームを用いることで、ユーザに恐怖感を与える。
         </p>
-        <img src="../assets/img/portfolio/ivrc2018.jpeg" width="256" />
+        <img
+          src="../assets/img/portfolio/ivrc2018.jpeg"
+          class="portfolio-image"
+        />
         <p>受賞・関連リンク</p>
         <ul>
-          <li>チームラボ賞</li>
+          <li v-for="award in ivrc2018.awards" :key="award">{{ award }}</li>
         </ul>
         <ul class="examples">
           <li v-for="example in ivrc2018.examples" :key="example.title">
@@ -197,7 +158,51 @@
 export default {
   data() {
     return {
+      reality: {
+        examples: [
+          {
+            title: "REALITY｜顔出しナシのライブ配信アプリ",
+            path: "https://reality.app/",
+          },
+          {
+            title: "GREE -New Grad of the year- 2020 受賞",
+            path: "https://hd.gree.net/jp/ja/6degrees/2021/08/01.html",
+          },
+          {
+            title:
+              "Observability強化とPerformance Tuningを行うチームの立ち上げ",
+            path: "https://note.com/reality_eng/n/n304df572550e",
+          },
+          {
+            title: "Protocol Buffersの検証と本番アプリへの導入",
+            path: "https://note.com/reality_eng/n/n2223d56db125",
+          },
+          {
+            title: "アプリ内配信サーバのマルチリージョン化",
+            path: "https://note.com/reality_eng/n/nc2f16c9fbad3",
+          },
+          {
+            title: "コーディングエージェントの導入",
+            path: "https://note.com/reality_eng/n/n4ad2f2f35127",
+          },
+        ],
+        keywords: [
+          "Go",
+          "TypeScript",
+          "Google Cloud",
+          "Software Engineering",
+          "Data Engineering",
+          "Observability Engineering",
+          "Metaverse",
+        ],
+      },
       ivrc2019: {
+        awards: [
+          "総合優勝",
+          "一般社団法人茗渓会賞",
+          "ドスパラ賞",
+          "ソリッドレイ研究所賞",
+        ],
         examples: [
           {
             title: "VR消防体験 -炎舞-(2019)",
@@ -211,6 +216,7 @@ export default {
         keywords: ["Virtual Reality", "Mechatronics", "Haptics", "Unity"],
       },
       research: {
+        awards: ["一般社団法人茗渓会賞", "電気学会技術委員会奨励賞"],
         examples: [
           {
             title: "Multitouch Haptic Interface with Movable Touch Screen",
@@ -224,6 +230,7 @@ export default {
         keywords: ["Virtual Reality", "Mechatronics", "Haptics", "Unity"],
       },
       ivrc2018: {
+        awards: ["チームラボ賞"],
         examples: [
           {
             title: "天獄渡り(2018)",
@@ -248,4 +255,10 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/scss/common.scss";
+.portfolio-image {
+  width: 256px;
+}
+img[src*="reality-avatar2.webp"] {
+  width: 512px;
+}
 </style>

@@ -5,7 +5,7 @@
         <h1>
           {{ title }}
         </h1>
-        <p style="white-space: pre-wrap; word-wrap: break-word">
+        <p class="description-text">
           {{ description }}
         </p>
       </div>
@@ -48,6 +48,12 @@ p {
   letter-spacing: 1.5px;
   line-height: 1.5;
 }
+
+.description-text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 .container {
   width: 80vw;
   margin: 0 auto;

@@ -36,20 +36,13 @@ const router = new VueRouter({
   routes,
 });
 
-router.onReady(() => {
+router.beforeEach((to, from, next) => {
   const redirectPath = sessionStorage.getItem("redirectPath");
-  if (redirectPath) {
+  if (redirectPath && to.path === router.options.base) {
     sessionStorage.removeItem("redirectPath");
-    router.replace(redirectPath).catch((err) => {
-      if (
-        err.name !== "NavigationDuplicated" &&
-        !err.message.includes(
-          "Avoided redundant navigation to current location"
-        )
-      ) {
-        console.error("Router redirect error:", err);
-      }
-    });
+    next(redirectPath);
+  } else {
+    next();
   }
 });
 

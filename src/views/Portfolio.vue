@@ -37,7 +37,7 @@
           風覚は温冷覚、聴覚、皮膚感覚、深部感覚を刺激することで知覚させ、水噴流反力は牽引力及びジャイロモーメントを用いて再現する．
         </p>
         <div class="image-stack">
-          <img src="../assets/img/portfolio/ivrc2019.png" width="256" />
+          <img src="../assets/img/portfolio/ivrc2019.jpeg" width="512" />
           <img src="../assets/img/portfolio/ivrc2019-2.jpeg" width="512" />
         </div>
         <p>受賞・関連リンク</p>
@@ -102,7 +102,6 @@
           この現象を逆手に取り、外部から膝の振動を与え、疑似的に膝を痙攣させることでユーザに恐怖感を錯覚させる。
           膝を振動させる膝振動デバイスのみではなく、HMD、モーションプラットフォームを用いることで、ユーザに恐怖感を与える。
         </p>
-        <img src="../assets/img/portfolio/ivrc2018.jpeg" width="256" />
         <p>受賞・関連リンク</p>
         <ul>
           <li v-for="award in ivrc2018.awards" :key="award">{{ award }}</li>

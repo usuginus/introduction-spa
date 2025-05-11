@@ -2,7 +2,7 @@
   <header>
     <nav>
       <ul>
-        <li v-for="(item, index) in filteredItems" :key="index">
+        <li v-for="(item, index) in items" :key="index">
           <router-link v-bind:to="item.path" exact>
             {{ item.title }}
           </router-link>
@@ -21,30 +21,8 @@ export default {
         { title: "HOME", path: "/" },
         { title: "PORTFOLIO", path: "/portfolio" },
         { title: "SKILL", path: "/skill" },
-        { title: "AVATAR", path: "/avatar" },
       ],
-      isMobile: false,
     };
-  },
-  computed: {
-    filteredItems() {
-      if (this.isMobile) {
-        return this.items.filter((item) => item.title !== "AVATAR");
-      }
-      return this.items;
-    },
-  },
-  methods: {
-    checkMobile() {
-      this.isMobile = window.innerWidth <= 480;
-    },
-  },
-  mounted() {
-    this.checkMobile();
-    window.addEventListener("resize", this.checkMobile);
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.checkMobile);
   },
 };
 </script>

@@ -1,3 +1,8 @@
+<!--
+  deprecated: 2025-05-01
+  このファイルは使用していません。
+  introduction-webglリポジトリで作成したもので、webglでアバターを表示します。
+-->
 <template>
   <div class="container">
     <div class="main">

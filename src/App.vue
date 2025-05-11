@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <menu-list></menu-list>
-    <transition name="page">
-      <router-view />
-    </transition>
+    <div v-if="isRouterReady">
+      <menu-list></menu-list>
+      <transition name="page">
+        <router-view />
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -14,6 +16,22 @@ export default {
   name: "App",
   components: {
     menuList,
+  },
+  data() {
+    return {
+      isRouterReady: false,
+    };
+  },
+  created() {
+    this.$router.onReady(
+      () => {
+        this.isRouterReady = true;
+      },
+      (error) => {
+        console.error("Router failed to ready:", error);
+        this.isRouterReady = true;
+      }
+    );
   },
 };
 </script>

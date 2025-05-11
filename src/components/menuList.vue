@@ -29,7 +29,7 @@ export default {
   computed: {
     filteredItems() {
       if (this.isMobile) {
-        return this.items.filter(item => item.title !== "AVATAR");
+        return this.items.filter((item) => item.title !== "AVATAR");
       }
       return this.items;
     },
@@ -111,6 +111,9 @@ a.router-link-active::before {
   }
   ul {
     font-size: 1rem;
+  }
+  a {
+    padding: 0 10px;
   }
 }
 </style>

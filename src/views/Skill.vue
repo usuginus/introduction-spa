@@ -4,8 +4,7 @@
     <article>
       <section>
         <h2>Web App</h2>
-        <h3>for Work in GREE Holdings, Inc.</h3>
-
+        <h3>for Software Development</h3>
         <p>受賞・資格・関連リンク</p>
         <ul>
           <li>GREE -New Grad of the year- 2020 受賞</li>
@@ -20,20 +19,23 @@
           </li>
         </ul>
         <p>使用技術</p>
-        <ul class="technology">
-          <li v-for="technology in web.technologies" :key="technology">
-            {{ technology }}
-          </li>
-        </ul>
-        <ul class="keywords">
-          <li v-for="keyword in web.keywords" :key="keyword">
-            {{ keyword }}
-          </li>
-        </ul>
+        <div v-for="category in web.technologies" :key="category.category">
+          <span>{{ category.category }}</span>
+          <ul class="technology">
+            <li v-for="item in category.items" :key="item.name">
+              <font-awesome-icon
+                v-if="item.icon"
+                :icon="item.icon"
+                class="tech-icon"
+              />
+              {{ item.name }}
+            </li>
+          </ul>
+        </div>
       </section>
       <section>
         <h2>VR App</h2>
-        <h3>for Research and IVRC in Tsukuba University</h3>
+        <h3>for Research & Development</h3>
         <p>受賞・資格・関連リンク</p>
         <ul>
           <li>一般社団法人茗渓会賞</li>
@@ -50,16 +52,19 @@
           </li>
         </ul>
         <p>使用技術</p>
-        <ul class="technology">
-          <li v-for="technology in web.technologies" :key="technology">
-            {{ technology }}
-          </li>
-        </ul>
-        <ul class="keywords">
-          <li v-for="keyword in vr.keywords" :key="keyword">
-            {{ keyword }}
-          </li>
-        </ul>
+        <div v-for="category in vr.technologies" :key="category.category">
+          <span>{{ category.category }}</span>
+          <ul class="technology">
+            <li v-for="item in category.items" :key="item.name">
+              <font-awesome-icon
+                v-if="item.icon"
+                :icon="item.icon"
+                class="tech-icon"
+              />
+              {{ item.name }}
+            </li>
+          </ul>
+        </div>
       </section>
     </article>
   </div>
@@ -99,22 +104,93 @@ export default {
           },
         ],
         technologies: [
-          "Programming Languages：Go, TypeScript, JavaScript, C#(Unity)",
-          "Runtime Environments：Node.js, Deno, Bun",
-          "Web Frontend Frameworks：Vue.js, React",
-          "Google Cloud：GKE, BigQuery, Cloud Storage, CloudSQL, Cloud Spanner, Memorystore, Pub/Sub, Cloud Scheduler, Cloud Tasks",
-          "Container / Orchestration：Docker, Kubernetes",
-          "Data Stores：MySQL, Cloud Spanner, Redis, Memcached, Valkey, Firestore, Firebase Realtime Database",
-          "Observability Engineering：Cloud Logging, Cloud Monitoring, Cloud Tracing, Grafana, Prometheus",
-          "Data Engineering：BigQuery, SQL, Dataform, Looker Studio, Datastream",
-          "Development Tools：Protocol Buffers, GitHub Actions, Jenkins, Terraform, Google App Script",
-        ],
-        keywords: [
-          "Web Application Development",
-          "Cloud Engineering",
-          "Data Engineering",
-          "Observability Engineering",
-          "Site Reliability Engineering",
+          {
+            category: "Programming Languages",
+            items: [
+              { name: "Go", icon: ["fab", "golang"] },
+              { name: "TypeScript", icon: ["fas", "code"] },
+              { name: "JavaScript", icon: ["fab", "js-square"] },
+              { name: "C#(Unity)", icon: ["fab", "unity"] },
+            ],
+          },
+          {
+            category: "Runtime Environments",
+            items: [
+              { name: "Node.js", icon: ["fab", "node-js"] },
+              { name: "Deno", icon: ["fas", "code"] },
+              { name: "Bun", icon: ["fas", "code"] },
+            ],
+          },
+          {
+            category: "Web Frontend Frameworks",
+            items: [
+              { name: "Vue.js", icon: ["fab", "vuejs"] },
+              { name: "React", icon: ["fab", "react"] },
+            ],
+          },
+          {
+            category: "Google Cloud",
+            items: [
+              { name: "GKE", icon: ["fas", "dharmachakra"] },
+              { name: "BigQuery", icon: ["fas", "database"] },
+              { name: "Cloud Storage", icon: ["fas", "cloud"] },
+              { name: "CloudSQL", icon: ["fas", "database"] },
+              { name: "Cloud Spanner", icon: ["fas", "database"] },
+              { name: "Memorystore", icon: ["fas", "memory"] },
+              { name: "Pub/Sub", icon: ["fas", "project-diagram"] },
+              { name: "Cloud Scheduler", icon: ["fas", "clock"] },
+              { name: "Cloud Tasks", icon: ["fas", "tasks"] },
+            ],
+          },
+          {
+            category: "Container / Orchestration",
+            items: [
+              { name: "Docker", icon: ["fab", "docker"] },
+              { name: "Kubernetes", icon: ["fas", "dharmachakra"] },
+            ],
+          },
+          {
+            category: "Data Stores",
+            items: [
+              { name: "MySQL", icon: ["fas", "database"] },
+              { name: "Cloud Spanner", icon: ["fas", "database"] },
+              { name: "Redis", icon: ["fas", "database"] },
+              { name: "Memcached", icon: ["fas", "memory"] },
+              { name: "Valkey", icon: ["fas", "database"] },
+              { name: "Firestore", icon: ["fas", "fire"] },
+              { name: "Firebase Realtime Database", icon: ["fas", "database"] },
+            ],
+          },
+          {
+            category: "Observability Engineering",
+            items: [
+              { name: "Cloud Logging", icon: ["fas", "file-alt"] },
+              { name: "Cloud Monitoring", icon: ["fas", "chart-line"] },
+              { name: "Cloud Tracing", icon: ["fas", "sitemap"] },
+              { name: "Grafana", icon: ["fas", "chart-bar"] },
+              { name: "Prometheus", icon: ["fas", "fire-alt"] },
+            ],
+          },
+          {
+            category: "Data Engineering",
+            items: [
+              { name: "BigQuery", icon: ["fas", "database"] },
+              { name: "SQL", icon: ["fas", "database"] },
+              { name: "Dataform", icon: ["fas", "code-branch"] },
+              { name: "Looker Studio", icon: ["fas", "chart-pie"] },
+              { name: "Datastream", icon: ["fas", "stream"] },
+            ],
+          },
+          {
+            category: "Development Tools",
+            items: [
+              { name: "Protocol Buffers", icon: ["fas", "cubes"] },
+              { name: "GitHub Actions", icon: ["fab", "github"] },
+              { name: "Jenkins", icon: ["fab", "jenkins"] },
+              { name: "Terraform", icon: ["fas", "layer-group"] },
+              { name: "Google App Script", icon: ["fab", "google-drive"] },
+            ],
+          },
         ],
       },
       vr: {
@@ -129,14 +205,21 @@ export default {
           },
         ],
         technologies: [
-          "Programming Languages：C++, C#(Unity), R",
-          "Development Tools：Google App Script",
-        ],
-        keywords: [
-          "Virtual Reality Development",
-          "Mechatronics Engineering",
-          "Unity Engineering",
-          "Haptic Interface Design",
+          {
+            category: "Programming Languages",
+            items: [
+              { name: "C++", icon: ["fas", "code"] },
+              { name: "C#(Unity)", icon: ["fab", "unity"] },
+              { name: "R", icon: ["fab", "r-project"] },
+              { name: "Fortran", icon: ["fas", "code"] },
+            ],
+          },
+          {
+            category: "Development Tools",
+            items: [
+              { name: "Google App Script", icon: ["fab", "google-drive"] },
+            ],
+          },
         ],
       },
     };

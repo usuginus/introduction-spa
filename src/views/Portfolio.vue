@@ -5,7 +5,7 @@
       <section>
         <h2>REALITY</h2>
         <h3>グリーホールディングス株式会社 / REALITY株式会社</h3>
-        <p>メタバースアプリ「REALITY」の開発に従事</p>
+        <p>メタバースアプリ「REALITY」の開発</p>
         <p>
           世界63の地域で展開されているスマートフォン向けメタバースアプリ「REALITY」のサーバーサイドを中心とした開発を担当。
           新規機能開発やパフォーマンスチューニング、ログ基盤・データ基盤の整備、Observabilityの強化などを通じて、アプリの機能向上と運用効率化に貢献。
@@ -36,7 +36,10 @@
           システムは映像提示装置と大風力を知覚させる風覚提示装置、水噴流反力を提示する力覚提示装置から構成される。
           風覚は温冷覚、聴覚、皮膚感覚、深部感覚を刺激することで知覚させ、水噴流反力は牽引力及びジャイロモーメントを用いて再現する．
         </p>
-        <img src="../assets/img/portfolio/ivrc2019.jpeg" width="256" />
+        <div class="image-stack">
+          <img src="../assets/img/portfolio/ivrc2019.jpeg" width="512" />
+          <img src="../assets/img/portfolio/ivrc2019-2.jpeg" width="512" />
+        </div>
         <p>受賞・関連リンク</p>
         <ul>
           <li v-for="award in ivrc2019.awards" :key="award">{{ award }}</li>
@@ -61,7 +64,17 @@
         <p>
           タブレットディスプレイを動作させ、指先にせん断力を与えることでバーチャル物体の形状や重さをユーザに知覚させるハプティックディスプレイです。
         </p>
-        <img src="../assets/img/portfolio/research.jpeg" width="256" />
+        <div class="youtube-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/YCZPmj7NtSQ?si=bjgQ2KKeMtaSStMK&amp;start=71"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>受賞・関連リンク</p>
         <ul>
           <li v-for="award in research.awards" :key="award">{{ award }}</li>
@@ -89,7 +102,6 @@
           この現象を逆手に取り、外部から膝の振動を与え、疑似的に膝を痙攣させることでユーザに恐怖感を錯覚させる。
           膝を振動させる膝振動デバイスのみではなく、HMD、モーションプラットフォームを用いることで、ユーザに恐怖感を与える。
         </p>
-        <img src="../assets/img/portfolio/ivrc2018.jpeg" width="256" />
         <p>受賞・関連リンク</p>
         <ul>
           <li v-for="award in ivrc2018.awards" :key="award">{{ award }}</li>
@@ -245,4 +257,8 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/scss/common.scss";
+.image-stack img {
+  display: block;
+  margin-bottom: 15px;
+}
 </style>

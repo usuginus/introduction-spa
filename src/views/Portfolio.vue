@@ -115,15 +115,17 @@
           ルービックキューブ外付型力覚提示デバイスと4面ホログラフィックディスプレイを用いた力覚提示装置。
           物体識別装置の中に入れた物体をルービックキューブ外付型力覚提示デバイスによってねじる様子を表示し，その力覚をユーザに提示する.
         </p>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/344g8o2PicA"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <div class="youtube-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/344g8o2PicA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>関連リンク</p>
         <ul class="examples">
           <li v-for="example in ivrc2017.examples" :key="example.title">

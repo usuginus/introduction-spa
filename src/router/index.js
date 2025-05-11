@@ -22,12 +22,6 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "cordings" */ "../views/Skill.vue"),
   },
-  {
-    path: "/avatar",
-    name: "Avatar",
-    component: () =>
-      import(/* webpackChunkName: "cordings" */ "../views/Avatar.vue"),
-  },
 ];
 
 const router = new VueRouter({

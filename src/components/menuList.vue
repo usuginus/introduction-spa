@@ -32,6 +32,8 @@ header {
   width: 80vw;
   margin: 0 auto;
   padding-top: 100px;
+  position: relative;
+  z-index: 1;
 }
 ul {
   list-style-type: none;

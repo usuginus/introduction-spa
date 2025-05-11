@@ -85,7 +85,7 @@ a.router-link-active::before {
 }
 @media screen and (max-width: 420px) {
   header {
-    padding-top: 12vh;
+    padding-top: 6vh;
     width: 100%;
   }
   ul {

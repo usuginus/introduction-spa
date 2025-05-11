@@ -5,10 +5,9 @@
       <section>
         <h2>Web App</h2>
         <h3>for Software Development</h3>
-        <p>受賞・資格・関連リンク</p>
+        <p>受賞・資格</p>
         <ul>
-          <li>GREE -New Grad of the year- 2020 受賞</li>
-          <li>Google Cloud Certified - Professional Cloud Developer取得</li>
+          <li v-for="award in web.awards" :key="award">{{ award }}</li>
         </ul>
         <p>関連リンク</p>
         <ul class="examples">
@@ -40,12 +39,9 @@
       <section>
         <h2>VR App</h2>
         <h3>for Research & Development</h3>
-        <p>受賞・資格・関連リンク</p>
+        <p>受賞・資格</p>
         <ul>
-          <li>一般社団法人茗渓会賞</li>
-          <li>電気学会技術委員会奨励賞</li>
-          <li>バーチャルリアリティ技術者（アプリケーション）取得</li>
-          <li>バーチャルリアリティ技術者（セオリー）取得</li>
+          <li v-for="award in vr.awards" :key="award">{{ award }}</li>
         </ul>
         <p>関連リンク</p>
         <ul class="examples">
@@ -83,6 +79,10 @@ export default {
   data() {
     return {
       web: {
+        awards: [
+          "GREE -New Grad of the year- 2020 受賞",
+          "Google Cloud Certified - Professional Cloud Developer取得",
+        ],
         examples: [
           {
             title: "GREE -New Grad of the year- 2020 受賞",
@@ -201,6 +201,12 @@ export default {
         ],
       },
       vr: {
+        awards: [
+          "一般社団法人茗渓会賞",
+          "電気学会技術委員会奨励賞",
+          "バーチャルリアリティ技術者（アプリケーション）取得",
+          "バーチャルリアリティ技術者（セオリー）取得",
+        ],
         examples: [
           {
             title: "電気学会平成30年電子・情報・システム部門 技術委員会奨励賞",

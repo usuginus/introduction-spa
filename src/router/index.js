@@ -36,4 +36,21 @@ const router = new VueRouter({
   routes,
 });
 
+router.onReady(() => {
+  const redirectPath = sessionStorage.getItem("redirectPath");
+  if (redirectPath) {
+    sessionStorage.removeItem("redirectPath");
+    router.replace(redirectPath).catch((err) => {
+      if (
+        err.name !== "NavigationDuplicated" &&
+        !err.message.includes(
+          "Avoided redundant navigation to current location"
+        )
+      ) {
+        console.error("Router redirect error:", err);
+      }
+    });
+  }
+});
+
 export default router;

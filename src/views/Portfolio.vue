@@ -14,63 +14,16 @@
         <img src="../assets/img/portfolio/reality-avatar2.webp" width="512" />
         <p>受賞・執筆記事・関連リンク</p>
         <ul class="examples">
-          <li>
-            <a href="https://reality.app/" target="_blank">
-              <span>REALITY｜顔出しナシのライブ配信アプリ</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://hd.gree.net/jp/ja/6degrees/2021/08/01.html"
-              target="_blank"
-            >
-              <span>GREE -New Grad of the year- 2020 受賞</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://note.com/reality_eng/n/n304df572550e"
-              target="_blank"
-            >
-              <span
-                >Observability強化とPerformance
-                Tuningを行うチームの立ち上げ</span
-              >
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://note.com/reality_eng/n/n2223d56db125"
-              target="_blank"
-            >
-              <span>Protocol Buffersの検証と本番アプリへの導入</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://note.com/reality_eng/n/nc2f16c9fbad3"
-              target="_blank"
-            >
-              <span>アプリ内配信サーバのマルチリージョン化</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://note.com/reality_eng/n/n4ad2f2f35127"
-              target="_blank"
-            >
-              <span>コーディングエージェントの導入</span>
+          <li v-for="example in reality.examples" :key="example.title">
+            <a :href="example.path" target="_blank">
+              <span>{{ example.title }}</span>
             </a>
           </li>
         </ul>
         <ul class="keywords">
-          <li>Go</li>
-          <li>TypeScript</li>
-          <li>Google Cloud</li>
-          <li>Software Engineering</li>
-          <li>Data Engineering</li>
-          <li>Observability Engineering</li>
-          <li>Metaverse</li>
+          <li v-for="keyword in reality.keywords" :key="keyword">
+            {{ keyword }}
+          </li>
         </ul>
       </section>
       <section>
@@ -86,10 +39,7 @@
         <img src="../assets/img/portfolio/ivrc2019.jpeg" width="256" />
         <p>受賞・関連リンク</p>
         <ul>
-          <li>ドスパラ賞</li>
-          <li>ソリッドレイ研究所賞</li>
-          <li>総合優勝</li>
-          <li>一般社団法人茗渓会賞</li>
+          <li v-for="award in ivrc2019.awards" :key="award">{{ award }}</li>
         </ul>
         <ul class="examples">
           <li v-for="example in ivrc2019.examples" :key="example.title">
@@ -114,8 +64,7 @@
         <img src="../assets/img/portfolio/research.jpeg" width="256" />
         <p>受賞・関連リンク</p>
         <ul>
-          <li>一般社団法人茗渓会賞</li>
-          <li>電気学会技術委員会奨励賞</li>
+          <li v-for="award in research.awards" :key="award">{{ award }}</li>
         </ul>
         <ul class="examples">
           <li v-for="example in research.examples" :key="example.title">
@@ -143,7 +92,7 @@
         <img src="../assets/img/portfolio/ivrc2018.jpeg" width="256" />
         <p>受賞・関連リンク</p>
         <ul>
-          <li>チームラボ賞</li>
+          <li v-for="award in ivrc2018.awards" :key="award">{{ award }}</li>
         </ul>
         <ul class="examples">
           <li v-for="example in ivrc2018.examples" :key="example.title">
@@ -197,7 +146,51 @@
 export default {
   data() {
     return {
+      reality: {
+        examples: [
+          {
+            title: "REALITY｜顔出しナシのライブ配信アプリ",
+            path: "https://reality.app/",
+          },
+          {
+            title: "GREE -New Grad of the year- 2020 受賞",
+            path: "https://hd.gree.net/jp/ja/6degrees/2021/08/01.html",
+          },
+          {
+            title:
+              "Observability強化とPerformance Tuningを行うチームの立ち上げ",
+            path: "https://note.com/reality_eng/n/n304df572550e",
+          },
+          {
+            title: "Protocol Buffersの検証と本番アプリへの導入",
+            path: "https://note.com/reality_eng/n/n2223d56db125",
+          },
+          {
+            title: "アプリ内配信サーバのマルチリージョン化",
+            path: "https://note.com/reality_eng/n/nc2f16c9fbad3",
+          },
+          {
+            title: "コーディングエージェントの導入",
+            path: "https://note.com/reality_eng/n/n4ad2f2f35127",
+          },
+        ],
+        keywords: [
+          "Go",
+          "TypeScript",
+          "Google Cloud",
+          "Software Engineering",
+          "Data Engineering",
+          "Observability Engineering",
+          "Metaverse",
+        ],
+      },
       ivrc2019: {
+        awards: [
+          "総合優勝",
+          "一般社団法人茗渓会賞",
+          "ドスパラ賞",
+          "ソリッドレイ研究所賞",
+        ],
         examples: [
           {
             title: "VR消防体験 -炎舞-(2019)",
@@ -211,6 +204,7 @@ export default {
         keywords: ["Virtual Reality", "Mechatronics", "Haptics", "Unity"],
       },
       research: {
+        awards: ["一般社団法人茗渓会賞", "電気学会技術委員会奨励賞"],
         examples: [
           {
             title: "Multitouch Haptic Interface with Movable Touch Screen",
@@ -224,6 +218,7 @@ export default {
         keywords: ["Virtual Reality", "Mechatronics", "Haptics", "Unity"],
       },
       ivrc2018: {
+        awards: ["チームラボ賞"],
         examples: [
           {
             title: "天獄渡り(2018)",

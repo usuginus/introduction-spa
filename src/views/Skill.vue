@@ -4,18 +4,25 @@
     <article>
       <section>
         <h2>Web App</h2>
-        <h3>for Work</h3>
-        <p>バックエンドアプリケーション開発が主。</p>
+        <h3>for Work in GREE Holdings, Inc.</h3>
+
         <p>受賞・資格・関連リンク</p>
         <ul>
           <li>GREE -New Grad of the year- 2020 受賞</li>
           <li>Google Cloud Certified - Professional Cloud Developer取得</li>
         </ul>
+        <p>関連リンク</p>
         <ul class="examples">
           <li v-for="example in web.examples" :key="example.title">
             <a v-bind:href="example.path" target="_blank">
               <span>{{ example.title }}</span>
             </a>
+          </li>
+        </ul>
+        <p>使用技術</p>
+        <ul class="technology">
+          <li v-for="technology in web.technologies" :key="technology">
+            {{ technology }}
           </li>
         </ul>
         <ul class="keywords">
@@ -26,11 +33,7 @@
       </section>
       <section>
         <h2>VR App</h2>
-        <h3>for Research and IVRC</h3>
-        <p>
-          Haptic
-          Interface設計・製作やUnityによるVRクライアントアプリケーション開発。
-        </p>
+        <h3>for Research and IVRC in Tsukuba University</h3>
         <p>受賞・資格・関連リンク</p>
         <ul>
           <li>一般社団法人茗渓会賞</li>
@@ -38,11 +41,18 @@
           <li>バーチャルリアリティ技術者（アプリケーション）取得</li>
           <li>バーチャルリアリティ技術者（セオリー）取得</li>
         </ul>
+        <p>関連リンク</p>
         <ul class="examples">
           <li v-for="example in vr.examples" :key="example.title">
             <a v-bind:href="example.path" target="_blank">
               <span>{{ example.title }}</span>
             </a>
+          </li>
+        </ul>
+        <p>使用技術</p>
+        <ul class="technology">
+          <li v-for="technology in web.technologies" :key="technology">
+            {{ technology }}
           </li>
         </ul>
         <ul class="keywords">
@@ -88,20 +98,23 @@ export default {
             path: "https://note.com/reality_eng/n/n4ad2f2f35127",
           },
         ],
+        technologies: [
+          "Programming Languages：Go, TypeScript, JavaScript, C#(Unity)",
+          "Runtime Environments：Node.js, Deno, Bun",
+          "Web Frontend Frameworks：Vue.js, React",
+          "Google Cloud：GKE, BigQuery, Cloud Storage, CloudSQL, Cloud Spanner, Memorystore, Pub/Sub, Cloud Scheduler, Cloud Tasks",
+          "Container / Orchestration：Docker, Kubernetes",
+          "Data Stores：MySQL, Cloud Spanner, Redis, Memcached, Valkey, Firestore, Firebase Realtime Database",
+          "Observability Engineering：Cloud Logging, Cloud Monitoring, Cloud Tracing, Grafana, Prometheus",
+          "Data Engineering：BigQuery, SQL, Dataform, Looker Studio, Datastream",
+          "Development Tools：Protocol Buffers, GitHub Actions, Jenkins, Terraform, Google App Script",
+        ],
         keywords: [
-          "Go",
-          "TypeScript",
-          "Node.js",
-          "Vue.js",
-          "Google Cloud",
-          "RDBMS",
-          "NoSQL",
-          "Observability",
-          "CI/CD",
-          "Container Orchestration",
-          "BigQuery",
+          "Web Application Development",
+          "Cloud Engineering",
           "Data Engineering",
-          "Protocol Buffers",
+          "Observability Engineering",
+          "Site Reliability Engineering",
         ],
       },
       vr: {
@@ -115,14 +128,15 @@ export default {
             path: "https://ivrc.net/2019/release2/",
           },
         ],
+        technologies: [
+          "Programming Languages：C++, C#(Unity), R",
+          "Development Tools：Google App Script",
+        ],
         keywords: [
-          "IVRC",
-          "Virtual Reality",
-          "Mechatronics",
-          "Unity",
-          "ROS",
-          "M5Stack",
-          "RaspberryPi",
+          "Virtual Reality Development",
+          "Mechatronics Engineering",
+          "Unity Engineering",
+          "Haptic Interface Design",
         ],
       },
     };

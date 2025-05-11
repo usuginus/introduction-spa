@@ -12,6 +12,17 @@
           GoやTypeScriptを用いたアプリケーション開発を中心にソフトウェアエンジニア、データエンジニア、エンジニアリングマネージャを経験。
         </p>
         <img src="../assets/img/portfolio/reality-avatar2.webp" width="512" />
+        <div class="youtube-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ktMNqFuW6uQ?si=lPmLSyyTew41nQRp"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>受賞・執筆記事・関連リンク</p>
         <ul class="examples">
           <li v-for="example in reality.examples" :key="example.title">
@@ -102,6 +113,17 @@
           この現象を逆手に取り、外部から膝の振動を与え、疑似的に膝を痙攣させることでユーザに恐怖感を錯覚させる。
           膝を振動させる膝振動デバイスのみではなく、HMD、モーションプラットフォームを用いることで、ユーザに恐怖感を与える。
         </p>
+        <div class="youtube-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/8WcjSPBK4X0?si=KkXITP-xPn2RzLpF"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>受賞・関連リンク</p>
         <ul>
           <li v-for="award in ivrc2018.awards" :key="award">{{ award }}</li>

@@ -113,30 +113,25 @@ export default {
         ],
         technologies: [
           {
-            category: "Programming Languages",
+            category: "Programming Languages / Runtimes",
             items: [
               { name: "Go", icon: ["fab", "golang"] },
               { name: "TypeScript", icon: ["fas", "code"] },
               { name: "JavaScript", icon: ["fab", "js-square"] },
-            ],
-          },
-          {
-            category: "Runtime Environments",
-            items: [
               { name: "Node.js", icon: ["fab", "node-js"] },
-              { name: "Deno", icon: ["fas", "code"] },
-              { name: "Bun", icon: ["fas", "code"] },
+              { name: "Deno", icon: ["fas", "server"] },
+              { name: "Bun", icon: ["fas", "server"] },
             ],
           },
           {
-            category: "Web Frontend Frameworks",
+            category: "Frontend Frameworks",
             items: [
               { name: "Vue.js", icon: ["fab", "vuejs"] },
               { name: "React", icon: ["fab", "react"] },
             ],
           },
           {
-            category: "Google Cloud",
+            category: "Cloud Platforms (Google Cloud)",
             items: [
               { name: "GKE", icon: ["fas", "dharmachakra"] },
               { name: "BigQuery", icon: ["fas", "database"] },
@@ -150,14 +145,14 @@ export default {
             ],
           },
           {
-            category: "Container / Orchestration",
+            category: "Containers / Orchestration",
             items: [
               { name: "Docker", icon: ["fab", "docker"] },
               { name: "Kubernetes", icon: ["fas", "dharmachakra"] },
             ],
           },
           {
-            category: "Data Stores",
+            category: "Databases",
             items: [
               { name: "MySQL", icon: ["fas", "database"] },
               { name: "Cloud Spanner", icon: ["fas", "database"] },
@@ -173,7 +168,7 @@ export default {
             items: [
               { name: "Cloud Logging", icon: ["fas", "file-alt"] },
               { name: "Cloud Monitoring", icon: ["fas", "chart-line"] },
-              { name: "Cloud Tracing", icon: ["fas", "sitemap"] },
+              { name: "Cloud Trace", icon: ["fas", "sitemap"] },
               { name: "Grafana", icon: ["fas", "chart-bar"] },
               { name: "Prometheus", icon: ["fas", "fire-alt"] },
             ],
@@ -230,18 +225,18 @@ export default {
           {
             category: "Development Tools",
             items: [
-              { name: "SOLIDWORKS", icon: ["fas", "robot"] },
-              { name: "ROS", icon: ["fas", "code"] },
+              { name: "SOLIDWORKS", icon: ["fas", "cube"] },
+              { name: "ROS", icon: ["fas", "robot"] },
               { name: "Google App Script", icon: ["fab", "google-drive"] },
             ],
           },
           {
-            category: "Hardware & Robotics",
+            category: "Hardware / Robotics",
             items: [
               { name: "M5Stack", icon: ["fas", "microchip"] },
               { name: "Arduino", icon: ["fas", "microchip"] },
               { name: "Raspberry Pi", icon: ["fab", "raspberry-pi"] },
-              { name: "Circuit Design", icon: ["fas", "microchip"] },
+              { name: "Circuit Design", icon: ["fas", "project-diagram"] },
               { name: "Mechatronics", icon: ["fas", "robot"] },
               { name: "Actuators", icon: ["fas", "cogs"] },
               { name: "Sensors", icon: ["fas", "satellite-dish"] },
@@ -249,7 +244,7 @@ export default {
             ],
           },
           {
-            category: "Simulation & Control",
+            category: "Simulation / Control",
             items: [
               {
                 name: "Kinematics / Inverse Kinematics",

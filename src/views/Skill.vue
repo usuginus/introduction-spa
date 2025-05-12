@@ -246,6 +246,7 @@ export default {
           {
             category: "Simulation / Control",
             items: [
+              { name: "PID Control", icon: ["fas", "cogs"] },
               {
                 name: "Kinematics / Inverse Kinematics",
                 icon: ["fas", "project-diagram"],

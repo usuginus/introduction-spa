@@ -223,7 +223,6 @@ export default {
             items: [
               { name: "C++", icon: ["fas", "code"] },
               { name: "C#(Unity)", icon: ["fab", "unity"] },
-              { name: "ROS", icon: ["fas", "code"] },
               { name: "R", icon: ["fab", "r-project"] },
               { name: "Fortran", icon: ["fas", "code"] },
             ],
@@ -231,6 +230,8 @@ export default {
           {
             category: "Development Tools",
             items: [
+              { name: "SOLIDWORKS", icon: ["fas", "robot"] },
+              { name: "ROS", icon: ["fas", "code"] },
               { name: "Google App Script", icon: ["fab", "google-drive"] },
             ],
           },

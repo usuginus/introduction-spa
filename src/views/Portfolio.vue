@@ -44,10 +44,15 @@
           システムは映像提示装置と大風力を知覚させる風覚提示装置、水噴流反力を提示する力覚提示装置から構成される。
           風覚は温冷覚、聴覚、皮膚感覚、深部感覚を刺激することで知覚させ、水噴流反力は牽引力及びジャイロモーメントを用いて再現する。
         </p>
-        <div class="image-stack">
-          <img src="../assets/img/portfolio/ivrc2019.jpeg" width="512" />
-          <img src="../assets/img/portfolio/ivrc2019-2.jpeg" width="512" />
-        </div>
+        <img src="../assets/img/portfolio/ivrc2019-2.jpeg" width="512" />
+        <iframe
+          class="youtube-frame"
+          src="https://www.youtube.com/embed/V0Sx3hOtxdg?si=0rLUEy-5zPn5yNBw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
         <p>受賞・関連リンク</p>
         <ul>
           <li v-for="award in ivrc2019.awards" :key="award">{{ award }}</li>
@@ -214,7 +219,7 @@ export default {
       },
       ivrc2019: {
         awards: [
-          "総合優勝",
+          "IVRC2019 総合優勝",
           "一般社団法人茗渓会賞",
           "ドスパラ賞",
           "ソリッドレイ研究所賞",
@@ -246,7 +251,7 @@ export default {
         keywords: ["Virtual Reality", "Mechatronics", "Haptics", "Unity"],
       },
       ivrc2018: {
-        awards: ["チームラボ賞"],
+        awards: ["IVRC2018 チームラボ賞"],
         examples: [
           {
             title: "天獄渡り(2018)",

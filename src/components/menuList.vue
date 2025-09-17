@@ -21,6 +21,7 @@ export default {
         { title: "HOME", path: "/" },
         { title: "PORTFOLIO", path: "/portfolio" },
         { title: "SKILL", path: "/skill" },
+        { title: "RESUME", path: "/resume" },
       ],
     };
   },

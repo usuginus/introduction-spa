@@ -22,6 +22,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "cordings" */ "../views/Skill.vue"),
   },
+  {
+    path: "/resume",
+    name: "Resume",
+    component: () =>
+      import(/* webpackChunkName: "resume" */ "../views/Resume.vue"),
+  },
 ];
 
 const router = new VueRouter({
